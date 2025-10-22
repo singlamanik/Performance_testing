@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: performance-testing
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /healthz
