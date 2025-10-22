@@ -13,7 +13,7 @@ function decrypt(encryptedData, ivHex) {
   return decrypted;
 }
 
-export default function handler(req, res) {
+function handler(req, res) {
   // Enable CORS for performance testing tools
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -51,3 +51,5 @@ export default function handler(req, res) {
     });
   }
 }
+
+module.exports = handler;
